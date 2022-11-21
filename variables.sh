@@ -10,3 +10,7 @@ echo "the value of z is ${z}"
 b=15
 c="$b" #variable enclosed in double quotes will be considered as value
 echo "the value of c is ${c}"
+
+#personalized echo -hackerrank
+read name
+echo "Welcome ${name}"
