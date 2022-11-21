@@ -14,3 +14,4 @@ echo "the value of c is ${c}"
 #personalized echo -hackerrank
 read name
 echo "Welcome ${name}"
+

@@ -20,6 +20,7 @@ do
 echo "This loop is iterating ${i} times"
 done
 echo "-------------------------------------------------"
+
 #Bash v4.0+ has inbuilt support for setting up a step value using {START..END..INCREMENT} syntax
 echo "Bash version = ${BASH_VERSION}"
 for i in {1..100..2} # increment by 2 -https://www.hackerrank.com/challenges/bash-tutorials---looping-and-skipping?isFullScreen=true
