@@ -1,5 +1,17 @@
 #!/bin/bash
-REGION=$1
-FORMAT=$2
-
-aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
+REGION1="us-east-1"
+FORMAT="json"
+echo "Getting the VPCs from region ${REGION1} in the output format in ${FORMAT}"
+aws ec2 describe-vpcs --region $REGION1 --output $FORMAT | jq ".Vpcs[].VpcId"
+echo "------------------------------------------"
+REGION2="us-east-2"
+echo "Getting the VPCs from region ${REGION2} in the output format in ${FORMAT}"
+aws ec2 describe-vpcs --region $REGION1 --output $FORMAT | jq ".Vpcs[].VpcId"
+echo "------------------------------------------"
+REGION3="us-west-1"
+echo "Getting the VPCs from region ${REGION3} in the output format in ${FORMAT}"
+aws ec2 describe-vpcs --region $REGION1 --output $FORMAT | jq ".Vpcs[].VpcId"
+echo "------------------------------------------"
+REGION4="us-west-2"
+echo "Getting the VPCs from region ${REGION4} in the output format in ${FORMAT}"
+aws ec2 describe-vpcs --region $REGION1 --output $FORMAT | jq ".Vpcs[].VpcId"
