@@ -18,6 +18,7 @@ FORMAT="json"
 
 # "#@ operator- receives multiple inputs"
 REGIONS=$@
+set -x -e
 for REGION in $REGIONS
 do
 echo "Getting the VPCs from region ${REGION} in the output format in ${FORMAT}"
