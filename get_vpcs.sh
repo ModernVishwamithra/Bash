@@ -28,3 +28,4 @@ aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
 done
 else
 echo "You have given ${COUNT} parameters in the input" 
+fi
