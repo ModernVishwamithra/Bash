@@ -19,7 +19,8 @@ FORMAT="json"
 # "#@ operator- receives multiple inputs"
 COUNT=$#
 REGIONS=$@
-set -x -e
+#set -x -e
+set -x
 if [[ "${COUNT}" -gt 0 ]] 
 then
     for REGION in $REGIONS
