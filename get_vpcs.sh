@@ -20,7 +20,7 @@ FORMAT="json"
 COUNT=$#
 REGIONS=$@
 set -x -e
-if ["${COUNT}" -gt 0] 
+if [[ "${COUNT}" -gt 0 ]] 
 then
     for REGION in $REGIONS
         do
