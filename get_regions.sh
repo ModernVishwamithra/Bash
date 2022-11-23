@@ -12,7 +12,7 @@ for REGION in ${REGIONS[@]}
 do 
 ALL_VPC_IDS=$(aws ec2 describe-vpcs --region $REGION --output json | jq ".Vpcs[].VpcId" | tr -d '"')
 VPC_ID_ARRAY=($ALL_VPC_IDS)
-echo "$VVPC_ID_ARRAY[@]"
+echo "${VVPC_ID_ARRAY[@]}"
 if [[ ${#VPC_ID_ARRAY[@]} -gt 0 ]]; then
 for VPCID in ${VPC_ID_ARRAY}
 do
