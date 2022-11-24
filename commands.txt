@@ -1,0 +1,3 @@
+# grep -i UBUNTU - granular regular expression, which filters the input to this command - here it will give output which consists of name "UBUNTU"
+# tr - translate command used to change the characters like upper case,lower case, trim, repeat, replace etc.. tr --help to find out more
+# tee - how T section for water pipes, similarly it used to print output in screen and as well as write to file
