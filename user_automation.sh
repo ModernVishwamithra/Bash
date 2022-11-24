@@ -4,7 +4,7 @@
 
 
 user=$@ 
-echo "the user name entered is ${user}"
+echo "the user name entered is ${#user[@]}"
 if [[ "${#user[@]}" -gt 0 ]]; then
 echo "User will be created"
 else
