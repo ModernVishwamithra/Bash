@@ -8,7 +8,7 @@ echo "the user name(s) entered is ${USERS} and number of users is $#"
 if [[ $# -gt 0 ]]; then
 for USER in ${USERS[@]}
 do
-USERNAME =(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
+USERNAME=$(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
 if [[ "$USERNAME" == "$USER" ]]; then
 echo "User $USERNAME Already Exists! Try another username"
 else
