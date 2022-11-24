@@ -5,3 +5,5 @@
 # useradd -m $USERNAME - adds user with home directory, check useradd --help
 # sudo chpasswd - change password promt will be displayed, but we have to enable password based login
 # passwd -e $USERNAME - expires password for the user, we can specify date or no.of days it can expire
+# cat /etc/passwd | grep -i ubuntu | awk -F'[:]' '{print $2 $3 $4 $1}' - get user names and get only ubuntu user and get its fields
+# cat /etc/passwd | grep -i $USER | cut -d ":" -f 1  - does the same as above

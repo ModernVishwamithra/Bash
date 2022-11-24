@@ -12,9 +12,11 @@ USERNAME=$(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
 if [[ "$USERNAME" == "$USER" ]]; then
 echo "User $USERNAME Already Exists! Try another username"
 else
+SPECIAL_CHAR=$(echo '!@#$%^&*()_' | fold -w1 | shuf | head -1)
+PASSWORD=INDIA@${RANDOM}${SPECIAL_CHAR}
 useradd -m $USERNAME | sudo chpasswd 
 passwd -e $USERNAME
-echo "User $USERNAME has been created successfully!"
+echo "User $USERNAME has been created successfully! and Your password is $PASSWORD"
 fi
 done
 else
