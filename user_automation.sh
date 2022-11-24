@@ -2,8 +2,9 @@
 # if exists, show error message that username already exists other wise create a user with random password
 # Once login, make password expire and promt user to create a new password.
 
-echo "Enter the user name"
-user=$1 
+
+user=$@ 
+echo "the user name entered is ${user}"
 if [[ "${#user[@]}" -gt 0 ]]; then
 echo "User will be created"
 else
