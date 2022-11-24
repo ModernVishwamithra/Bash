@@ -6,9 +6,15 @@
 USERS=$@ 
 echo "the user name(s) entered is ${USERS} and number of users is $#"
 if [[ $# -gt 0 ]]; then
-echo "User will be created"
 for USER in ${USERS[@]}
-USERNAME=(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
+do
+USERNAME =(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
+if [[ "$USERNAME" == "$USER" ]]; then
+echo "User $USERNAME Already Exists! Try another username"
+else
+echo "User $USERNAME will be created"
+fi
+done
 else
 echo "You have given $# parameters" 
 fi
