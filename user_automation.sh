@@ -6,7 +6,8 @@ if [[ $# -gt 0 ]]; then
     USERS=$@
     echo "the user name(s) entered is ${USERS} and number of users is $#"
     for USER in ${USERS[@]}; do
-    if [[ $USER =~ ^[a-zA-Z]+$ ]];then
+    #if [[ $USER =~ ^[a-zA-Z]+$ ]];then # does not allow numbers in the text
+    if [[ $USER =~ ^[a-zA-Z] ]];then #Allows starts with aplhabets and include numbers in between or last
         EXIST_USER=$(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
         if [[ "$EXIST_USER" == "$USER" ]]; then
             echo "User $USER Already Exists! Try another username"
