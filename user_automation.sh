@@ -18,6 +18,7 @@ useradd -m $USER --shell /bin/bash
 echo "${USER}:${PASSWORD}" | sudo chpasswd
 passwd -e $USER
 echo "User $USER has been created successfully! and Your password is $PASSWORD"
+echo "${USER} ALL=(ALL) NOPASSWD: ALL" >>/etc/sudoers
 fi
 done
 else
