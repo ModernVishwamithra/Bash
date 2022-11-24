@@ -13,8 +13,9 @@ if [[ "$EXIST_USER" == "$USER" ]]; then
 echo "User $USER Already Exists! Try another username"
 else
 SPECIAL_CHAR=$(echo '!@#$%^&*()_' | fold -w1 | shuf | head -1)
-PASSWORD=INDIA@${RANDOM}${SPECIAL_CHAR}
-useradd -m $USER | sudo chpasswd 
+PASSWORD=India@${RANDOM}${SPECIAL_CHAR}
+useradd -m $USER --shell /bin/bash 
+echo "${USER}:${PASSWORD}" | sudo chpasswd
 passwd -e $USER
 echo "User $USER has been created successfully! and Your password is $PASSWORD"
 fi
