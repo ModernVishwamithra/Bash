@@ -7,3 +7,5 @@
 # passwd -e $USERNAME - expires password for the user, we can specify date or no.of days it can expire
 # cat /etc/passwd | grep -i ubuntu | awk -F'[:]' '{print $2 $3 $4 $1}' - get user names and get only ubuntu user and get its fields
 # cat /etc/passwd | grep -i $USER | cut -d ":" -f 1  - does the same as above
+# echo '!@#$%^&*()_' | fold -w3 - #fold -it prints vertically with 3 columns as a group 
+# echo '!@#$%^&*()_' | fold -w1 | head -2 - as **fold** prints vertically and **head** trims how many elements we require 
