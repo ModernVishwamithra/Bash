@@ -8,3 +8,4 @@ if [[${#user} -gt 0]]; then
 echo "User will be created"
 else
 echo "You have given ${#user}" 
+fi
