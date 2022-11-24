@@ -4,8 +4,8 @@
 
 
 user=$@ 
-echo "the user name entered is ${#user[@]}"
-if [[ "${#user[@]}" -gt 0 ]]; then
+echo "the user name(s) entered is ${user} and number of users is $#"
+if [[ $# -gt 0 ]]; then
 echo "User will be created"
 else
 echo "You have given ${#user[@]} parameters" 
