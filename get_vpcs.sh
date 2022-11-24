@@ -21,13 +21,11 @@ COUNT=$#
 REGIONS=$@
 #set -x -e
 set -x #enable debugging
-if [[ "${COUNT}" -gt 0 ]] 
-then
-    for REGION in $REGIONS
-        do
-            echo "Getting the VPCs from region ${REGION} in the output format in ${FORMAT}"
-            aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
-        done
+if [[ "${COUNT}" -gt 0 ]]; then
+    for REGION in $REGIONS; do
+        echo "Getting the VPCs from region ${REGION} in the output format in ${FORMAT}"
+        aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
+    done
 else
-    echo "You have given ${COUNT} parameters in the input" 
+    echo "You have given ${COUNT} parameters in the input"
 fi
