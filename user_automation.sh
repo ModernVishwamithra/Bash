@@ -12,8 +12,7 @@ USERNAME=$(cat /etc/passwd | grep -i $USER | cut -d ":" -f 1)
 if [[ "$USERNAME" == "$USER" ]]; then
 echo "User $USERNAME Already Exists! Try another username"
 else
-useradd -m $USERNAME
-sudo chpasswd 
+useradd -m $USERNAME | sudo chpasswd 
 passwd -e $USERNAME
 echo "User $USERNAME has been created successfully!"
 fi
