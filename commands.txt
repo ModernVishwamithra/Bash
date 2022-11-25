@@ -9,3 +9,5 @@
 # cat /etc/passwd | grep -i $USER | cut -d ":" -f 1  - does the same as above
 # echo '!@#$%^&*()_' | fold -w3 - #fold -it prints vertically with 3 columns as a group 
 # echo '!@#$%^&*()_' | fold -w1 | head -2 - as **fold** prints vertically and **head** trims how many elements we require 
+# read -p "Enter your name : " USERNAME  - read is a function that reads inpus and '-p' means promt a msg
+# date +%Y - which gives the year as per the OS calender settings
