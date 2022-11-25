@@ -33,7 +33,7 @@
 #---------------------------------------------------
 #Covid Vaccine age check
 echo "Welcome to covid vaccine age check"
-USERNAME=$uname
+read -p "Enter your name" USERNAME
 read -p "Enter the year of birth" YOB
 if [[ "${#YOB}" -gt 0 ]]; then
 YEAR=$(date +%Y)
