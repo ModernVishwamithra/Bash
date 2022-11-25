@@ -20,12 +20,22 @@
 # else
 #     statement 4
 # fi
+#---------------------------------------------------
+# echo -n "Enter a number"
+# read var
+# if [[ $var -gt 10 ]]
+# then
+#   echo "The variable is greater than 10."
+# else
+#   echo "The variable is equal or less than 10."
+# fi
 
-echo -n "Enter a number"
-read var
-if [[ $var -gt 10 ]]
-then
-  echo "The variable is greater than 10."
+#---------------------------------------------------
+#Covid Vaccine age check
+echo "Welcome to covid vaccine age check"
+read -p "Enter the year of birth" YOB
+if [[$# -gt 0]]; then
+YEAR=$(date +%Y)
 else
-  echo "The variable is equal or less than 10."
+echo "Please enter year of Birth"
 fi
