@@ -33,9 +33,10 @@
 #---------------------------------------------------
 #Covid Vaccine age check
 echo "Welcome to covid vaccine age check"
-read -p "Enter your name" USERNAME
-read -p "Enter the year of birth" YOB
-if [[ "${#YOB}" -gt 0 ]]; then
+read -p "Enter your name : " USERNAME
+if [[ $USERNAME =~ ^[a-zA-Z] ]]; then
+read -p "Enter the year of birth : " YOB
+if [[ "${#YOB}" -eq 4 ]]; then
 YEAR=$(date +%Y)
 AGE=$[ "$YEAR" - "$YOB" ]
 #AGE=$(expr $YEAR - $YOB)
@@ -49,4 +50,7 @@ echo " Hi $USERNAME, Sorry that you are not eligible to take vaccine. please tak
 fi
 else
 echo "Please enter valid year of Birth"
+fi
+else
+echo "Please enter valid Username starts with alphabets only"
 fi
