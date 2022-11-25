@@ -34,8 +34,10 @@
 #Covid Vaccine age check
 echo "Welcome to covid vaccine age check"
 read -p "Enter the year of birth" YOB
-if [[$# -gt 0]]; then
+if [[ $# -gt 0 ]]; then
 YEAR=$(date +%Y)
+AGE=$[ "$YEAR" - "$YOB" ]
+echo "Your curent age is $AGE"
 else
 echo "Please enter year of Birth"
 fi
