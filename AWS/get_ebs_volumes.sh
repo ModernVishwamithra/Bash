@@ -13,5 +13,5 @@ echo "volume Array is $VOLUME_ARRAY"
 # else
 # echo "EBS volumes from region $REGION is not available"
 # fi
-done
+#done
 done
