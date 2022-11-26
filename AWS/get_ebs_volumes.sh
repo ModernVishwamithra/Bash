@@ -7,11 +7,3 @@ VOLUME_IDS=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[])
 VOLUME_ARRAY=($VOLUME_IDS)
 echo "volume Array is $VOLUME_ARRAY"
 done
-# for VOLUME in $(jq "VOLUMES); do
-# echo "EBS volumes from region $REGION is $VOLUME"
-# if [[ ${#VOLUMES} -gt 0 ]]; then
-# echo "EBS volumes from region $REGION is $VOLUME"
-# else
-# echo "EBS volumes from region $REGION is not available"
-# fi
-#done

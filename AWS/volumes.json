@@ -1,0 +1,30 @@
+{
+    "Volumes": [
+        {
+            "Attachments": [],
+            "AvailabilityZone": "us-east-2a",
+            "CreateTime": "2022-11-26T00:32:07.749000+00:00",
+            "Encrypted": false,
+            "Size": 3,
+            "SnapshotId": "",
+            "State": "available",
+            "VolumeId": "vol-06213566ca02bf547",
+            "Iops": 100,
+            "VolumeType": "gp2",
+            "MultiAttachEnabled": false
+        },
+        {
+            "Attachments": [],
+            "AvailabilityZone": "us-east-2a",
+            "CreateTime": "2022-11-26T00:32:25.173000+00:00",
+            "Encrypted": false,
+            "Size": 1,
+            "SnapshotId": "",
+            "State": "available",
+            "VolumeId": "vol-08b707bf2f489567e",
+            "Iops": 100,
+            "VolumeType": "gp2",
+            "MultiAttachEnabled": false
+        }
+    ]
+}
