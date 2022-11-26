@@ -3,7 +3,9 @@
 set -x
 REGIONS=$(aws ec2 describe-regions | jq ".Regions[].RegionName" | tr -d '"')
 for REGION in ${REGIONS[@]}; do 
-VOLUME_IDS=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[]")
-VOLUME_ARRAY=($VOLUME_IDS)
-echo "volume Array is $VOLUME_ARRAY"
+if [[ $(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId") = "" ]]; then
+echo "No EBS volumes are present in this Region $REGION "
+else
+VOLUME_IDS=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId" | tr -d '"')
+echo "volume(s) present in this region is(are) $VOLUME_IDS"
 done
