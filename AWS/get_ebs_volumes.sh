@@ -1,6 +1,6 @@
 #Script to get the ebs volumes based on the region and delete UNATTACHED volumes
 #!/bin/bash
-set -x
+# set -x
 REGIONS=$(aws ec2 describe-regions | jq ".Regions[].RegionName" | tr -d '"')
 for REGION in ${REGIONS[@]}; do 
 if [[ $(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId") = "" ]]; then
