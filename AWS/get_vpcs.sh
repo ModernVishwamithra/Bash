@@ -41,4 +41,4 @@ Get_VPC() {
     done
 }
 
-Get_VPC us-east-1
+Get_VPC $1
