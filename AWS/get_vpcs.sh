@@ -34,10 +34,10 @@ FORMAT="json"
 
 Get_VPC() {
     for REGION in $@; do
-    echo "Running The Functon To List VPCs in $1"
-    vpc_list=$(aws ec2 describe-vpcs --region $1 | jq .Vpcs[].VpcId | tr -d '"')
+    echo "Running The Functon To List VPCs in $REGION"
+    vpc_list=$(aws ec2 describe-vpcs --region $REGION | jq .Vpcs[].VpcId | tr -d '"')
     for vpc in $(echo $vpc_list); do
-        echo "The VPC ID IS:$vpc"
+        echo "The VPC ID for region $REGION IS:$vpc"
         echo "======================================="
     done
     done
