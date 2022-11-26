@@ -2,5 +2,6 @@
 #!/bin/bash
 REGIONS=$(aws ec2 describe-regions | jq ".Regions[].RegionName" | tr -d '"')
 for REGION in ${REGIONS[@]}; do 
-echo "Region is $REGION"
+VOLUMES=$(aws ec2 describe-volumes --region $REGION)
+echo "EBS volumes from region $REGION is $VOLUMES"
 done
