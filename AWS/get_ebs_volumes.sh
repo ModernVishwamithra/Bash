@@ -7,8 +7,17 @@ if [[ $(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId") = 
 echo "No EBS volumes are present in this Region $REGION "
 else
 VOLUME_IDS=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId" | tr -d '"')
+echo "There are ${#VOLUME_IDS} volumes are present in this region  $REGION "
 for VOLUME_ID in ${VOLUME_IDS[@]}; do 
-echo "volume(s) present in this region $REGION is(are) $VOLUME_ID"
+echo "They are $VOLUME_ID"
+if [[ $(aws ec2 describe-volumes \
+    --region $REGION \
+    --filters Name=status,Values=available Name=volume-id,Values=$VOLUME_ID| jq ".Volumes[].State" | tr -d '"') = "available"]]; then
+    echo "Deleting unattached volume $VOLUME_ID"
+    else
+    echo "Cannot able to delete $VOLUME_ID"
+    fi
 done
+VOLUME_ID_STATE=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].State" | tr -d '"')
 fi
 done
