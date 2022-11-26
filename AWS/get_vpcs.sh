@@ -32,7 +32,7 @@ FORMAT="json"
 
 #uisng functions
 
-Get_VPC() {
+get_vpc() {
     for REGION in $@; do
     echo "Running The Functon To List VPCs in $REGION"
     vpc_list=$(aws ec2 describe-vpcs --region $REGION | jq .Vpcs[].VpcId | tr -d '"')
@@ -43,4 +43,4 @@ Get_VPC() {
     done
 }
 
-Get_VPC $@
+get_vpc $@
