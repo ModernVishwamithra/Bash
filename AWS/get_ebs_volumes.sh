@@ -12,7 +12,7 @@ for VOLUME_ID in ${VOLUME_IDS[@]}; do
 echo "They are $VOLUME_ID"
 if [[ $(aws ec2 describe-volumes \
     --region $REGION \
-    --filters Name=status,Values=available Name=volume-id,Values=$VOLUME_ID| jq ".Volumes[].State" | tr -d '"') = "available"]]; then
+    --filters Name=status,Values=available Name=volume-id,Values=$VOLUME_ID| jq ".Volumes[].State" | tr -d '"') = "available" ]]; then
     echo "Deleting unattached volume $VOLUME_ID"
     else
     echo "Cannot able to delete $VOLUME_ID"
