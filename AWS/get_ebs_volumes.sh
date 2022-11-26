@@ -7,6 +7,8 @@ if [[ $(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId") = 
 echo "No EBS volumes are present in this Region $REGION "
 else
 VOLUME_IDS=$(aws ec2 describe-volumes --region $REGION | jq ".Volumes[].VolumeId" | tr -d '"')
-echo "volume(s) present in this region is(are) $VOLUME_IDS"
+for VOLUME_ID in ${VOLUME_IDS[@]}; do 
+echo "volume(s) present in this region $REGION is(are) $VOLUME_ID"
+done
 fi
 done
