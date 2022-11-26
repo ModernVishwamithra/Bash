@@ -33,7 +33,8 @@ function get_subnets_with_filters
 }
 
 get_vpc() {
-    for REGION in $(aws ec2 describe-regions | jq ".Regions[].RegionName" | tr -d '"'); do
+    REGIONS=$(aws ec2 describe-regions | jq ".Regions[].RegionName" | tr -d '"');
+    for REGION in ${REGIONS[@]}; do
     echo "Running The Functon To List VPCs in $REGION"
     vpc_list=$(aws ec2 describe-vpcs --region $REGION | jq .Vpcs[].VpcId | tr -d '"')
     for VPC in $(echo $vpc_list); do
