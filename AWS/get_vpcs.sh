@@ -17,15 +17,28 @@ FORMAT="json"
 # aws ec2 describe-vpcs --region $REGION4 --output $FORMAT | jq ".Vpcs[].VpcId"
 
 # "#@ operator- receives multiple inputs"
-COUNT=$#
-REGIONS=$@
-#set -x -e
-set -x #enable debugging
-if [[ "${COUNT}" -gt 0 ]]; then
-    for REGION in $REGIONS; do
-        echo "Getting the VPCs from region ${REGION} in the output format in ${FORMAT}"
-        aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
+# COUNT=$#
+# REGIONS=$@
+# #set -x -e
+# set -x #enable debugging
+# if [[ "${COUNT}" -gt 0 ]]; then
+#     for REGION in $REGIONS; do
+#         echo "Getting the VPCs from region ${REGION} in the output format in ${FORMAT}"
+#         aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
+#     done
+# else
+#     echo "You have given ${COUNT} parameters in the input"
+# fi
+
+#uisng functions
+
+Get_VPC() {
+    echo "Running The Functon To List VPCs in $1"
+    vpc_list=$(aws ec2 describe-vpcs --region $1 | jq .Vpcs[].VpcId | tr -d '"')
+    for vpc in $(echo $vpc_list); do
+        echo "The VPC ID IS:$vpc"
+        echo "======================================="
     done
-else
-    echo "You have given ${COUNT} parameters in the input"
-fi
+}
+
+Get_VPC us-east-1
