@@ -1,0 +1,13 @@
+# grep -i UBUNTU - granular regular expression, which filters the input to this command - here it will give output which consists of name "UBUNTU"
+# tr - translate command used to change the characters like upper case,lower case, trim, repeat, replace etc.. tr --help to find out more
+# tee - how T section for water pipes, similarly it used to print output in screen and as well as write to file
+# set -x #enable debugging
+# useradd -m $USERNAME - adds user with home directory, check useradd --help
+# sudo chpasswd - change password promt will be displayed, but we have to enable password based login
+# passwd -e $USERNAME - expires password for the user, we can specify date or no.of days it can expire
+# cat /etc/passwd | grep -i ubuntu | awk -F'[:]' '{print $2 $3 $4 $1}' - get user names and get only ubuntu user and get its fields
+# cat /etc/passwd | grep -i $USER | cut -d ":" -f 1  - does the same as above
+# echo '!@#$%^&*()_' | fold -w3 - #fold -it prints vertically with 3 columns as a group 
+# echo '!@#$%^&*()_' | fold -w1 | head -2 - as **fold** prints vertically and **head** trims how many elements we require 
+# read -p "Enter your name : " USERNAME  - read is a function that reads inpus and '-p' means promt a msg
+# date +%Y - which gives the year as per the OS calender settings
