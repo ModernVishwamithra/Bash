@@ -1,0 +1,7 @@
+git branch -b AWS # create and switch to branch name "AWS"
+git branch -d AWS # delete branch named "AWS"
+git branch -D AWS # force delete branch named "AWS"
+git branch -c AWS AWS2 # copy branch named "AWS" to new branch "AWS2"
+git branch -C AWS # force copy branch named "AWS" to new branch "AWS2"
+git add . # add the entire modified files to staged
+git add filename #it add the files to staged

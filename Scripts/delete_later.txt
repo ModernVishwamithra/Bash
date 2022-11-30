@@ -1,0 +1,5 @@
+Welcome to linux commands practice
+Welcome to linux practice
+Welcome to AWS
+Welcome to DevOps
+This is VScode editor
