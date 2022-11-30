@@ -12,8 +12,9 @@ git pull #linux version of command-we no need to specify branch name
 git fetch origin <branch-name> # it tells us is there any commits but it wont modify the files unlike git pull
 git fetch # linux version of fetch to see actually any commits without modifying code
 git checkout <branch-name> # change the current branch to another branch
-git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
-git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
-
 git checkout <branch-name> # change the current branch to another branch named <branch-name>
 git checkout -b <branch-name> # change the current branch to another branch named <branch-name>, if not exists, it will create by using -b parameter
+git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
+git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
+git checkout -t <remote_name>/<branch_name> #checkout remote branch -t for track
+git checkout -B <branch> <start_point> # checkout the branch from specific commit <start_point>
