@@ -7,4 +7,4 @@ git add . # add the entire modified files to staged
 git add filename #it add the files to staged
 get merge <branch-name> # mergers the current branch with <branch name>- usually we create a local branch for testing, if it works then we merge with working branch
 git pull origin <branch-name> # windows powershell uses to update the latest code from repository to local repository. Files will be modified
-
+git 
