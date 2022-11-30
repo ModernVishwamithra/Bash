@@ -15,3 +15,5 @@ git checkout <branch-name> # change the current branch to another branch
 git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
 git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
 
+git checkout <branch-name> # change the current branch to another branch named <branch-name>
+git checkout -b <branch-name> # change the current branch to another branch named <branch-name>, if not exists, it will create by using -b parameter
