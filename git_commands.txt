@@ -21,5 +21,7 @@ git checkout -B <branch> <start_point> # checkout the branch from specific commi
 ####:git reset - this is used to undo the changes in local repository before pushing to upstream branch
 git reset --hard <commit-id> - this will bring the changes in the files/delete code/text or files upto the <commit-id>, files are unstaged, need to add, commit and push
 git reset --hard HEAD~<n> - it will remove the tip(HEAD commit) to previous <n> commits by removing the files or modifying code/text
-git reset --soft <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text
+git reset --soft <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text - all the files are staged which means directly we can commit files
 git reset --soft HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+git reset --mixed <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text -all the files are unstaged which means we need to add and commit
+git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
