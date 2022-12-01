@@ -19,5 +19,7 @@ git switch -c <branch-name> # change the current branch to another branch, if no
 git checkout -t <remote_name>/<branch_name> #checkout remote branch -t for track
 git checkout -B <branch> <start_point> # checkout the branch from specific commit <start_point>
 ####:git reset - this is used to undo the changes in local repository before pushing to upstream branch
-git reset --hard <commit-id> - this will bring the changes in the files upto the <commit-id>, files are unstaged, need to add, commit and push
-git reset --hard HEAD~2 - it will move the tip(HEAD commit) to previous two commits
+git reset --hard <commit-id> - this will bring the changes in the files/delete code/text or files upto the <commit-id>, files are unstaged, need to add, commit and push
+git reset --hard HEAD~<n> - it will remove the tip(HEAD commit) to previous <n> commits by removing the files or modifying code/text
+git reset --soft <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text
+git reset --soft HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
