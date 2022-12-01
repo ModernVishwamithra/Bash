@@ -16,4 +16,5 @@ git checkout -b <branch-name> # change the current branch to another branch name
 git checkout <commit-id>
 git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
 git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
-
+git checkout -t <remote_name>/<branch_name> #checkout remote branch -t for track
+git checkout -B <branch> <start_point> # checkout the branch from specific commit <start_point>
