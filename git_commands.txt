@@ -16,4 +16,6 @@ git checkout -b <branch-name> # change the current branch to another branch name
 git checkout <commit-id>
 git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
 git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
-
+####:git reset - this is used to undo the changes in local repository before pushing to upstream branch
+git reset --hard <commit-id> - this will bring the changes in the files upto the <commit-id>, files are unstaged, need to add, commit and push
+git reset --hard HEAD~2 - it will move the tip(HEAD commit) to previous two commits
