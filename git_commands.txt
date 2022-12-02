@@ -32,3 +32,4 @@ git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> c
 Revert 1
 Revert 2
 Revert 3
+Revert 4
