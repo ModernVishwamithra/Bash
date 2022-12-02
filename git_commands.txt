@@ -1,0 +1,31 @@
+git branch -b AWS # create and switch to branch name "AWS"
+git branch -d AWS # delete branch named "AWS"
+git branch -D AWS # force delete branch named "AWS"
+git branch -c AWS AWS2 # copy branch named "AWS" to new branch "AWS2"
+git branch -C AWS # force copy branch named "AWS" to new branch "AWS2"
+git add . # add the entire modified files to staged
+git add filename #it add the files to staged
+get merge <branch-name> # mergers the current branch with <branch name>- usually we create a local branch for testing, if it works then we merge with working branch
+git pull origin <branch-name> # windows powershell uses to update the latest code from repository to local repository. Files will be modified
+git pull origin <branch-name> # windows powershell uses to update the latest code from repository to local repository. Files will be modified
+git pull #linux version of command-we no need to specify branch name
+git fetch origin <branch-name> # it tells us is there any commits but it wont modify the files unlike git pull
+git fetch # linux version of fetch to see actually any commits without modifying code
+git checkout <branch-name> # change the current branch to another branch named <branch-name>
+git checkout -b <branch-name> # change the current branch to another branch named <branch-name>, if not branch is present it creates and switch to that branch
+git checkout <commit-id>
+git switch <branch-name> # change the current branch to another branch, but its the only purpose unlike checkout
+git switch -c <branch-name> # change the current branch to another branch, if not existed it automatically creates and switch to that branch
+git checkout -t <remote_name>/<branch_name> #checkout remote branch -t for track
+git checkout -B <branch> <start_point> # checkout the branch from specific commit <start_point>
+####:git reset - this is used to undo the changes in local repository before pushing to upstream branch
+git reset --hard <commit-id> - this will bring the changes in the files/delete code/text or files upto the <commit-id>, files are unstaged, need to add, commit and push
+git reset --hard HEAD~<n> - it will remove the tip(HEAD commit) to previous <n> commits by removing the files or modifying code/text
+git reset --soft <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text - all the files are staged which means directly we can commit files
+git reset --soft HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+git reset --mixed <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text -all the files are unstaged which means we need to add and commit
+git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+git merge <merge-branch-name> -  merge the branch <merge-branch-name> with another checkout branch
+git branch -D <branch-name> - deletes the branch <branch-name>            
+git revert <commit-id> - changes the code or files at the point of <commit-id> and instead of deleting old commits, it creates new commit with revert. 
+git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code

@@ -1,5 +1,25 @@
 # grep -i UBUNTU - granular regular expression, which filters the input to this command - here it will give output which consists of name "UBUNTU"
+###################----tr-Translate-working with characters-------################
 # tr - translate command used to change the characters like upper case,lower case, trim, repeat, replace etc.. tr --help to find out more
+# echo "This is scripting" | tr -d ' ' - delete (-d) the space character in the text
+# echo "This is scripting" | tr 'a-z' 'A-Z' - converts lower to upper case
+# echo "This is scripting" |tr [:upper:] [:lower:] - upper to lower -similar as above but notation changes, this is called character classes - 
+# echo "This is scripting" | tr 'ing' 'klu' - replacing characters i with k , n with l, and g with u
+###################----sed----Stream editior----################ it is used work with strings in a file
+#- Can do insertion, deletion, search and replace(substitution).
+
+
+
+###################----find--------################
+# find /etc -name *.sh - find the files with .sh extension in the /etc directory
+# find / -size 6M - find the files with size equals to 6 MB
+# find / -size +100M -find the files with size greater than 100 MB
+# find / -size -10M -name *.sh - find the files less than 10 MB
+# find / -size +10M -size -20M - find the files with 10>size<20 MB
+# ################--awk------###########################
+# cat /etc/passwd | awk -F'[:]' '{print $2 $6}'
+
+
 # tee - how T section for water pipes, similarly it used to print output in screen and as well as write to file
 # set -x #enable debugging
 # useradd -m $USERNAME - adds user with home directory, check useradd --help
