@@ -25,3 +25,4 @@ git reset --soft <commit-id> - this will remove only commits upto the <commit-id
 git reset --soft HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
 git reset --mixed <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text -all the files are unstaged which means we need to add and commit
 git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+git revert
