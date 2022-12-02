@@ -29,3 +29,4 @@ git merge <merge-branch-name> -  merge the branch <merge-branch-name> with anoth
 git branch -D <branch-name> - deletes the branch <branch-name>            
 git revert <commit-id> - changes the code or files at the point of <commit-id> and instead of deleting old commits, it creates new commit with revert. 
 git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+Revert 1
