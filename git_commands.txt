@@ -24,8 +24,11 @@ git reset --hard HEAD~<n> - it will remove the tip(HEAD commit) to previous <n> 
 git reset --soft <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text - all the files are staged which means directly we can commit files
 git reset --soft HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
 git reset --mixed <commit-id> - this will remove only commits upto the <commit-id>, but it wont modify files or code/text -all the files are unstaged which means we need to add and commit
+<<<<<<< HEAD
 git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
 git merge <merge-branch-name> -  merge the branch <merge-branch-name> with another checkout branch
 git branch -D <branch-name> - deletes the branch <branch-name>            
 git revert <commit-id> - changes the code or files at the point of <commit-id> and instead of deleting old commits, it creates new commit with revert. 
+=======
+>>>>>>> parent of 45e46a0 (Added git merge and branch delete command)
 git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
