@@ -31,3 +31,4 @@ git revert <commit-id> - changes the code or files at the point of <commit-id> a
 git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
 Revert 1
 Revert 2
+Revert 3
