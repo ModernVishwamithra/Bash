@@ -34,3 +34,5 @@ git merge --squash <branch_name> - takes the entire commits from <branch_name> a
 git bisect <commit-id> - binary search of a commit which created bug ot the commit till which code works perfectly
 f111111
 f222222
+f333
+f444
