@@ -30,3 +30,4 @@ git branch -D <branch-name> - deletes the branch <branch-name>
 git revert <commit-id> - changes the code or files at the point of <commit-id> and instead of deleting old commits, it creates new commit with revert. 
 git cherry-pick <SHA of required commit> - merge specific commit in one branch to another branch
 git rebase <branch-name> - It changes the base of the current branch based on other <branch-name>-it is like merge, but it rewrites the commit history
+git merge --squash <branch_name> - takes the entire commits from <branch_name> and added as a single new commit in the current branch
