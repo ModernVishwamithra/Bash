@@ -35,3 +35,5 @@ git bisect <commit-id> - binary search of a commit which created bug ot the comm
 feature 1
 feature 2
 feature 3
+feature 4
+feature 5
