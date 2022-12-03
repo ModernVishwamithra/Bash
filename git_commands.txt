@@ -32,3 +32,5 @@ git cherry-pick <SHA of required commit> - merge specific commit in one branch t
 git rebase <branch-name> - It changes the base of the current branch based on other <branch-name>-it is like merge, but it rewrites the commit history
 git merge --squash <branch_name> - takes the entire commits from <branch_name> and added as a single new commit in the current branch
 git bisect <commit-id> - binary search of a commit which created bug ot the commit till which code works perfectly
+f111111
+f222222
