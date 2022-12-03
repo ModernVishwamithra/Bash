@@ -35,3 +35,4 @@ git bisect <commit-id> - binary search of a commit which created bug ot the comm
 merge 1
 merge 2
 merge 3
+merge 4
