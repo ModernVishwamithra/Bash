@@ -35,3 +35,4 @@ git bisect <commit-id> - binary search of a commit which created bug ot the comm
 git rebase -i <commit-id> - interactive rebase ,which allows us to choose which commits to squash or change the names etc
 git rebase -i HEAD~<n> - interactive rebase ,which allows us recent <n> commits to squash or change the names etc
 1111111
+222222
