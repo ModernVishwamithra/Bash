@@ -28,4 +28,50 @@ git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> c
 git merge <merge-branch-name> -  merge the branch <merge-branch-name> with another checkout branch
 git branch -D <branch-name> - deletes the branch <branch-name>            
 git revert <commit-id> - changes the code or files at the point of <commit-id> and instead of deleting old commits, it creates new commit with revert. 
-git reset --mixed HEAD~<n> - it will move the tip(HEAD commit) to previous <n> commits by deleting in between commits not files/code
+git cherry-pick <SHA of required commit> - merge specific commit in one branch to another branch
+git rebase <branch-name> - It changes the base of the current branch based on other <branch-name>-it is like merge, but it rewrites the commit history
+git merge --squash <branch_name> - takes the entire commits from <branch_name> and added as a single new commit in the current branch
+git bisect <commit-id> - binary search of a commit which created bug ot the commit till which code works perfectly
+git rebase -i <commit-id> - interactive rebase ,which allows us to choose which commits to squash or change the names etc
+git rebase -i HEAD~<n> - interactive rebase ,which allows us recent <n> commits to squash or change the names etc
+
+*******git stash******
+When you are working with the code and you suddenly want to work on another code but you are intended to commit/push those code to remote
+you have to save it temperorily, now to make the above possible "git statsh" is used
+
+The "git stash" command takes your uncommitted changes (both staged and unstaged), 
+saves them away for later use, and then reverts them from your working copy
+
+-By default, running git stash will stash:
+
+changes that have been added to your index (staged changes)
+changes made to files that are currently tracked by Git (unstaged changes)
+
+-But it will not stash:
+
+new files in your working copy that have not yet been staged
+files that have been ignored
+
+git stash apply - you can reapply the changes to your working copy and keep them in your stash with git stash apply, 
+which means, a copy from stash is incorporated into working code and keep the stashed data as it is, 
+we can import this stashed data to other files or branches
+
+git stash pop - it pops the recently stashed file
+
+git stash -p - You can also choose to stash just a single file, a collection of files, 
+or individual changes from within files. If you pass the -p option (or --patch) to git stash, 
+it will iterate through each changed "hunk" in your working copy and ask whether you wish to stash it:
+
+git stash list - lists all the stashes 
+
+git stash save "message" - custom message can be added while stashing, while popping-up/reading we can understand what/why we have stashed
+
+git stash pop stash@{2} - if we have a list of stashes and we need to pick one stash it will be helpful
+
+git stash show - we can see the summary of the stash
+
+git stash show -p - Or pass the -p option (or --patch) to view the full diff of a stash
+
+git stash drop - If you decide you no longer need a particular stash, you can delete it with this
+
+git stash clear - you can delete all of your stashes
