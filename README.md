@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # Bash-Scripting
-=======
 # Bash
-Bash scripting basics
->>>>>>> master
+### Bash scripting basics ###
+#### Integrated this repo to sonar cloud ####
